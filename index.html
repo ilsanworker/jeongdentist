@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>정은서 치과의원</title>
+
+  <link rel="icon" href="favicon.ico" type="x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* 헤더 */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 3px;
+      width: 100%;
+      height: 1.3cm;
+      font-size: 20px !important;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease;
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+
+    .header.scrolled {
+      background: #f1f1f1;
+    }
+
+    .header-title {
+      font-weight: 600;
+    }
+
+    .header-more {
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    /* 사이드 메뉴 */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -220px;
+      width: 220px;
+      height: 100vh;
+      background: #fff;
+      box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+      transition: right 0.3s ease;
+      z-index: 1100;
+      padding-top: 1cm;
+    }
+
+    .side-menu.open {
+      right: 0;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 16px;
+      text-decoration: none;
+      color: #000;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* 배너 */
+    .banner-wrapper {
+      margin-top: 1.2cm;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .banner {
+      width: 100%;
+      aspect-ratio: 80 / 35;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .banner-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+    }
+
+    .banner-track img {
+    width: 100%;
+    flex-shrink: 0;
+    }
+      /* 아이콘 메뉴 */
+    .icon-menu {
+        margin: 18px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px 0;
+        text-align: center;
+    }
+
+    .icon-menu a {
+        text-decoration: none;
+        color: #000;
+        font-size: 14px;
+    }
+
+    .icon-menu i {
+        font-size: 22px;
+        margin-bottom: 6px;
+        display: block;
+    }
+
+    section{
+        padding-left: 5px;
+        min-height: 200px;
+    }
+
+    .in{
+        padding-left: 7px;
+    }
+
+    .image-wrapper {
+        display: flex;
+        justify-content: center;
+        }
+
+        .image-wrapper img {
+        width: 70%;
+        height: auto;
+        border-radius: 14px;
+        display: block;
+        object-fit: cover;
+        }
+
+        .highlight {
+        font-size: 1.3em;   /* 글자 키우기 */
+        font-weight: 600;
+        }
+
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-title">정은서 치과의원</div>
+    <div class="header-more" id="menuBtn">⋯</div>
+  </header>
+
+  <nav class="side-menu" id="sideMenu">
+    <a href="#staff">의료진 소개</a>
+    <a href="#equipment">장비 소개</a>
+  </nav>
+
+  <div class="banner-wrapper">
+    <div class="banner">
+      <div class="banner-track" id="bannerTrack">
+        <img src="pic.png"/>
+        <img src="pic.png"/>
+        <img src="pic.png"/>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="icon-menu">
+    <!-- 첫 줄 -->
+    <a href="#location">
+      <i class="fa-solid fa-location-dot"></i>
+      병원 위치
+    </a>
+    <a href="#staff">
+      <i class="fa-solid fa-user-doctor"></i>
+      의료진 소개
+    </a>
+    <a href="#reservation">
+      <i class="fa-solid fa-calendar-check"></i>
+      예약
+    </a>
+  
+    <!-- 두 번째 줄 -->
+    <a href="#building">
+      <i class="fa-solid fa-hospital"></i>
+      병원 외형
+    </a>
+    <a href="#equipment">
+      <i class="fa-solid fa-microscope"></i>
+      장비 소개
+    </a>
+    <a href="#treatment">
+      <i class="fa-solid fa-tooth"></i>
+      시술 소개
+    </a>
+  </div>
+
+  <section id="staff">    
+    <h3>1.의료진 소개</h3>
+    <div class="in">
+        <h2>원장 : 정은서</h2>
+        <p>치의학과 대학교 입학과 졸업 수석출신!! <br/>주엽고등학교의 얼굴 정은서 원장님!</p>
+    </div>
+
+
+  </section>
+
+  <section id="equipment">
+    <h3>2.장비 소개</h3>
+
+  </section>
+
+    <section id="location">
+        <h3>3.병원 위치</h3>
+
+    </section>
+
+    <section id="reservation">
+        <h3>4.예약</h3>
+
+    </section>
+
+    <section id="building">
+        <h3>5.병원 디자인 소개</h3>
+        <div class="image-wrapper">
+            <img
+              src="pic2.png"
+              alt="병원 이미지"
+            />
+        </div>
+
+        <p style="margin: 0; text-align: center;"> 세계적인 건축 디자이너 <span class="highlight">이성빈님</span>의 작품이다. <br/>치과 병원 답게 디자인은 치아를 사용함 <br/>디자인을 현대적으로 미래지향적으로 재해석함.</p>
+
+    </section>
+
+    <section id="treatment">
+        <h3>6.시술 소개</h3>
+
+    </section>
+
+  <script>
+    const header = document.getElementById('header');
+    const menuBtn = document.getElementById('menuBtn');
+    const sideMenu = document.getElementById('sideMenu');
+    const bannerTrack = document.getElementById('bannerTrack');
+
+    // 스크롤 시 헤더 색상 변경 (1cm ≈ 38px)
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 38) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // 사이드 메뉴 토글
+    menuBtn.addEventListener('click', () => {
+      sideMenu.classList.toggle('open');
+    });
+
+    let index = 0;
+    const total = bannerTrack.children.length;
+
+    setInterval(() => {
+    index = (index + 1) % total;
+    bannerTrack.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+
+  </script>
+
+</body>
+</html>
